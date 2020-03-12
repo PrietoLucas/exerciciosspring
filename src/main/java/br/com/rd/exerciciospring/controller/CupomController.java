@@ -15,8 +15,8 @@ public class CupomController {
     CupomService service;
 
     @GetMapping("/cupom")
-    public void search(@PathVariable(required = true) Long id, @PathVariable(required = true) String dtVenda){
-        service.searchByClientAndDate(id, dtVenda);
+    public void search(@PathParam("idCliente") Long idCliente, @PathParam("dtVenda") String dtVenda){
+        service.searchByClientAndDate(idCliente, dtVenda);
     }
 }
 
